@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+    <head>
+        <!-- META -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <title>Tooltip jQuery plugin | Demo</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
+        
+        <link href="jquery.tooltip.css" rel="stylesheet" />
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        
+        <style>
+            * {padding: 0; margin: 0;}
+            html {
+                min-height: 100%;
+                background: #53c7b7;
+                background: -moz-linear-gradient(-30deg, #53c7b7 0%, #3b88c0 100%);
+                background: -webkit-linear-gradient(-30deg, #53c7b7 0%,#3b88c0 100%);
+                background: linear-gradient(150deg, #53c7b7 0%,#3b88c0 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53c7b7', endColorstr='#3b88c0',GradientType=1 );
+            }
+            body {
+                padding: 100px 0;
+                text-align: center;
+            }
+            p {
+                color: #333;
+                font-size: 12pt;
+                font-family: "Helvetica Neue", "Helvetica";
+                margin-bottom: 50px;
+            }
+            .block {
+                display: inline-block;
+                border: 2px solid #fff;
+                background-color: rgba(255, 255, 255, 0.7);
+                padding: 10px;
+                border-radius: 3px;
+                cursor: default;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <p>Hover these blocks to see the tooltip:</p>
+        
+        <p id="top" class="block"    data-tt="A beautiful tooltip...">$('#top').tooltip( {position:'top'} );</p><br>
+        <p id="right" class="block"  data-tt="...on<br>several<br>lines,">$('#right').tooltip( {position:'right'} );</p><br>
+        <p id="bottom" class="block" data-tt="dynamically placed,">$('#bottom').tooltip( {position:'bottom'} );</p><br>
+        <p id="left" class="block"   data-tt="handling  HTML,<br>for <i>italic,</i><br><strong>bold,</strong><br>...">$('#left').tooltip( {position:'left'} );</p><br>
+        
+        <p id="color" class="block"  data-tt="Grey is good. Pink is better.">{ backgroundColor: '#FF0097' }</p><br>
+        
+        <script src="jquery.tooltip.js"></script>
+        
+        <script type="text/javascript">
+            $('#top').tooltip( {position:'top'} );
+            $('#right').tooltip( {position:'right'} );
+            $('#bottom').tooltip( {position:'bottom'} );
+            $('#left').tooltip( {position:'left'} );
+            $('#color').tooltip( {backgroundColor: '#FF0097'} );
+        </script>
+    </body>
+</html>
